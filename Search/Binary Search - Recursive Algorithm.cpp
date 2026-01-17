@@ -1,14 +1,14 @@
 #include <iostream>
 #include <vector>
 using namespace std;
-int BinarySearch(vector<int> num, int high, int low, int mid, int query){
-    if(low <= mid){
+int BinarySearch(vector<int> num, int high, int low, int query){
+    if(low <= high){
         int mid = (high+low)/2;
         if(num[mid] > query){
-            BinarySearch(num, mid-1, low, query);
+            return BinarySearch(num, mid-1, low, query);
         }
         else if(num[mid] < query){
-            BinarySearch(num, high, mid+1, query);
+            return BinarySearch(num, high, mid+1, query);
         }
         else if (num[mid]==query){
             return mid;
