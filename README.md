@@ -1,4 +1,5 @@
-🎯 DSA Striver's A2Z Sheet: Learn DSA A-to-Z
+**🎯 DSA Striver's A2Z Sheet: Learn DSA A-to-Z**
+
 This repository serves as my personal archive for solving the Striver's A2Z DSA Course/Sheet. My goal is to master Data Structures and Algorithms from the ground up, moving from basic logic building to advanced topics like Dynamic Programming and Graphs.
 
 
