@@ -4,9 +4,18 @@ using namespace std;
 class Solution {
 public:
     int maxProfit(vector<int>& prices) {
-        int buy_price=INT_MAX;
-        int sell_price=INT_MIN;
+        int max_profit=0;
+        int min_price=0;
         int n = prices.size();
-        for(int i=0; i<n; i++){}
+        int sell=n-1;
+        for(int i=0;i<n; i++){
+            if(prices[i]<min_price){
+                min_price=prices[i];
+            }
+            else{
+                max_profit=max(max_profit,prices[i]-min_price);
+            }
+        }
+        return max_profit;
     }
 };

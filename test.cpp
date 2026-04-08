@@ -3,18 +3,32 @@
 using namespace std;
 class Solution {
 public:
-    vector<int> rearrangeArray(vector<int>& nums) {
+    void nextPermutation(vector<int>& nums) {
         int n = nums.size();
-        vector<int> positive;
-        vector<int> negative;
-        for(int i=0; i<n; i++){
-            if(nums[i]<0){
-                negative.push_back(nums[i]);
+        int break_point=-1;
+        int dist;
+        int old_dist= INT_MAX;
+        int to_swap;
+        for(int i=n-2;i>=0;i--){
+            if(nums[i]<nums[i+1]){
+                i = break_point;
+                break;
             }
-            else{
-                positive.push_back(nums[i]);
+        }
+        for(int i=break_point+1;i<n;i++){
+            if(nums[break_point]<nums[i]){
+                dist = nums[i]-nums[break_point];
+                if(dist==min(dist,old_dist)){
+                    old_dist=dist;
+                    to_swap=i;
+                };
             }
-        }   
+        }
+        swap(nums[to_swap],nums[break_point]);
+
+        
+
+
     }
 };
 int main(){
