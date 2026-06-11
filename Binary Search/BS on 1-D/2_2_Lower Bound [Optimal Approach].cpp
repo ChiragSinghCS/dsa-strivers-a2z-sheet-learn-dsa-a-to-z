@@ -9,15 +9,14 @@ public:
         int ans = n;
         int high = n-1;
         int low = 0;
-        int mid = (high + low)/2;
-        // binary serach loop
-        while(low>=high){
+        while(low<=high){
+            int mid = (high + low)/2;
             if(nums[mid]>=x){
-                ans = x;
+                ans = mid;
                 high = mid -1;
             }
             else if(nums[mid]<x){
-                high = mid + 1;
+                low = mid + 1;
             }
         }
         return ans;
