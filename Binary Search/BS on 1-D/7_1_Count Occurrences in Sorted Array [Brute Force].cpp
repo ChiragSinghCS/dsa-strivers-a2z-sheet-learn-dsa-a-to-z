@@ -1,0 +1,17 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+class Solution {
+public:
+    int countOccurrences(vector<int>& arr, int target) {
+        int n = arr.size();
+        int count = 0;
+        for(int i = 0; i<n; i++){
+            if(arr[i] == target){
+                count++;
+            }
+        }
+        return count;
+    }
+};
