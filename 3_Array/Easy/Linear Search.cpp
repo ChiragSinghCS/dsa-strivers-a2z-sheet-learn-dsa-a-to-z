@@ -6,6 +6,5 @@ class Solution{
             if(arr[i] == num)
             return i;
         }
-        return -1;
     }
 };
