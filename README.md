@@ -24,7 +24,7 @@ Each folder corresponds to a "Step" in the sheet for easy navigation
 🚀 How to use this repo
 If you are also following the sheet, feel free to explore the solutions. Each file is named after the problem for easy searching.
 1.Navigate to the specific Step folder.
-2.Open the .cpp / .java / .py file to see the logic.
+2.Open the .cpp file to see the logic.
 3.Check the comments for intuition and complexity analysis.
 
 ===================================================================
